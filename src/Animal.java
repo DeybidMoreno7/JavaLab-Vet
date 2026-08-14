@@ -1,4 +1,4 @@
-public abstract class Animal {
+public abstract class Animal implements Consulta {
 
     //
     protected String nombre;
@@ -11,6 +11,11 @@ public abstract class Animal {
         this.nombreDueno = nombreDueno;
     }
 
-
-
+    @Override
+    public String toString() {
+        return  "\nNombre: " + nombre +
+                "\nEdad: " + edad +
+                "\nNombre Dueño: " + nombreDueno +
+                "\nCosto consulta: " + calcularCostoConsulta();
+    }
 }

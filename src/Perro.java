@@ -1,5 +1,40 @@
-public class Perro extends Animal {
-    public Perro(String nombre, int edad, String nombreDueno) {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Perro extends Animal implements Vacunable, Asegurable {
+
+    private String raza;
+    private List<String>vacunas = new ArrayList<>();
+
+    public Perro(String nombre, int edad, String nombreDueno, String raza) {
         super(nombre, edad, nombreDueno);
+        this.raza = raza;
+    }
+
+
+    //implementacion de la interfaz que herada de Animal
+    @Override
+    public double calcularCostoConsulta() {
+        return 45000.0 + (3000.0 * edad);
+    }
+
+    @Override
+    public void registrarVacuna(String nombre) {
+        vacunas.add(nombre);
+    }
+
+    @Override
+    public int getVacunasAplicadas() {
+        return vacunas.size();
+    }
+
+    @Override
+    public double calcularPrimaSeguro() {
+        return (80000.0*edad);
+    }
+
+    @Override
+    public String obtenerNumeroPoliza() {
+        return "Annie-001";
     }
 }

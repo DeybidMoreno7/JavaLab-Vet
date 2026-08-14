@@ -1,5 +1,15 @@
 public class Ave extends Animal{
-    public Ave(String nombre, int edad, String nombreDueno) {
+
+    private double pesoGramos;
+
+    public Ave(String nombre, int edad, String nombreDueno, double pesoGramos) {
         super(nombre, edad, nombreDueno);
+        this.pesoGramos = pesoGramos;
+    }
+
+    //implementacion de la interfaz que herada de Animal
+    @Override
+    public double calcularCostoConsulta() {
+        return 28000.0 + (100.0*pesoGramos);
     }
 }
