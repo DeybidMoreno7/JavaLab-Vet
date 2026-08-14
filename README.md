@@ -3,8 +3,7 @@ Las clases Ave, Perro y Gato heredarán de la clase abstracta Animal,
 pues bien, Animal es lo que mejor abstrae el concepto que engloba a
 las 3 clases.
 
-A priori creo que la "consulta con costo" puede ser un método default
-en una Interface.
+La "consulta con costo" debe ser un método abstracto en una Interface.
 
 No entendí inicialmente cómo pasar a código el tema de vacunado y asegurable,
 creo que serían Interfaces también.
